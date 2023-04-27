@@ -1,5 +1,4 @@
 package sistema_estoque;
-import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
@@ -14,17 +13,10 @@ public class Main {
 		lista.adicionarProduto(p3);
 		lista.adicionarProduto(p4);
 		lista.adicionarProduto(p5);
-		for (int i = 0; i < lista.retornaProdutos().size(); i++) {
-			System.out.println(lista.retornaProdutos().get(i).getNome());
-		}
-		
-		Collections.sort(lista.retornaProdutos());
-		System.out.println("Lista ordenada por nome:");
-		for (int i = 0; i < lista.retornaProdutos().size(); i++) {
-			System.out.println(lista.retornaProdutos().get(i).getNome());
-		}
-		
-		
+		lista.retornaProdutos();
+		lista.ordenaNome();
+		lista.exclui(p1);
+		lista.ordenaNome();
 		
 
 	}
